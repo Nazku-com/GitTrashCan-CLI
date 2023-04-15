@@ -15,6 +15,8 @@ git clone https://github.com/Nazku-KR/GitTrashCan-CLI && cd GitTrashCan-CLI && c
 
 This will install the gitTrashCan command-line tool to your system.
 
+after download, reopen the terminal and use the GitTrashCan-CLI!
+
 ## Usage
 
 To use GitTrashCan-CLI, navigate to the root directory of your Git repository and run the gitTrashCan command:
