@@ -17,6 +17,13 @@ This will install the gitTrashCan command-line tool to your system.
 
 after download, reopen the terminal and use the GitTrashCan-CLI!
 
+**Note**: If you are not using the zsh shell, you will need to manually copy the gitTrashCan file to a directory in your PATH.
+
+```shell
+cat ./gitTrashCan >> PathThatYouUse
+source PathThatYouUse
+```
+
 ## Usage
 
 To use GitTrashCan-CLI, navigate to the root directory of your Git repository and run the gitTrashCan command:
