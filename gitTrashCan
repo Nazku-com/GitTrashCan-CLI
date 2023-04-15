@@ -1,0 +1,32 @@
+
+function gitTrashCan() {
+  # Check if the path to the Git repository was provided as an argument
+  if [ $# -eq 1 ]; then
+    repo_path=$1
+  else
+    # Use the current directory if no path was provided
+    repo_path=$(pwd)
+  fi
+
+  # Check if the Git repository exists at the specified path
+  if [[ ! -d $repo_path/.git ]]; then
+    echo "Error: Git repository not found at $repo_path"
+    return 1
+  fi
+
+  # Display the list of commits in the reflog
+  reflog_list=$(git --git-dir=$repo_path/.git fsck --no-reflog | awk '/dangling commit/ {print $3}' | xargs -L 1 git --git-dir=$repo_path/.git --no-pager show -s --format="%ci %H %s" | sort)
+  echo "$reflog_list"
+
+  # Prompt the user for input
+  echo -n "Which commit do you want to restore? (enter hash value): "
+  read commit_hash
+
+  # Checkout the branch corresponding to the selected commit
+  trash_branch="trash-$(date +%Y-%m-%d-%H-%M-%S)"
+  git --git-dir=$repo_path/.git checkout -b $trash_branch $commit_hash
+
+  # Display the contents of the restored branch
+  echo "Restored branch contents:"
+  ls -l $repo_path
+}
