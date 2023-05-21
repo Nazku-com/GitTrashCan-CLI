@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/52348220/232210763-ff3556fc-621d-46fe-
 To install `GitTrashCan-CLI`, clone the repository and run the `install.sh` or run the command under below
 
 ```shell
-git clone https://github.com/Nazku-KR/GitTrashCan-CLI && cd GitTrashCan-CLI && chmod 555 ./init.sh && ./init.sh
+git clone https://github.com/Nazku-com/GitTrashCan-CLI && cd GitTrashCan-CLI && chmod 555 ./init.sh && ./init.sh
 ```
 
 This will install the gitTrashCan command-line tool to your system.
