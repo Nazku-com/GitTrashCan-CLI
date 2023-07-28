@@ -46,10 +46,6 @@ gitTrashCan /path/to/repo
 ```
 This will perform the same operation on the specified repository.
 
-## GUI Version
-
-A graphical user interface (GUI) version of GitTrashCan is currently under development and will be released soon. Stay tuned for updates!
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
